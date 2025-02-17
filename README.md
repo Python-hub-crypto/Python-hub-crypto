@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @Python-hub-crypto
+- 👋 Hi, I’m @Abdul Aziz 
 - 👀 I’m interested in MD Simulation in Biological systems, Quantum Computing, Machine Learning
 - 🌱 I’m currently learning MD Simulation method and Machine Learning
 - 💞️ I’m looking to collaborate on MD Simulation and computing
