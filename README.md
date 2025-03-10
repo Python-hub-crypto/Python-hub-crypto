@@ -1,4 +1,4 @@
-# 👋 Hi, I'm Abdul Aziz  
+# Hi, I'm Abdul Aziz  
 
 ## 🚀 About Me  
 I am a **Molecular Dynamics (MD) Simulation** enthusiast with a strong interest in applying **Machine Learning (ML)** and **Quantum Computing** to biological systems. My work revolves around leveraging computational techniques to understand molecular interactions at a deeper level.  
