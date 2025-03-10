@@ -1,0 +1,37 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib
+
+# Set publication-style parameters for optimal presentation
+plt.rcParams.update({
+    "font.family": "Times New Roman",  # Preferred serif font for publications
+    "font.size": 28,                   # General font size
+    "axes.labelsize": 28,              # Axis label size (increased)
+    "axes.titlesize": 20,              # Title size
+    "axes.labelweight": 'bold',        # Bold labels for emphasis
+    "axes.linewidth": 3,             # Thicker axis lines for clarity
+    "lines.linewidth": 3,              # Thicker lines for visibility
+    "xtick.labelsize": 25,             # X-axis tick label size
+    "ytick.labelsize": 25,             # Y-axis tick label size
+    "xtick.direction": 'in',           # Tick marks directed inward for clean layout
+    "ytick.direction": 'in',           # Tick marks directed inward for clean layout
+    "xtick.top": True,                 # Display ticks on top
+    "ytick.right": True,               # Display ticks on the right
+    "xtick.major.size": 10,            # Major tick size for clarity
+    "ytick.major.size": 10,            # Major tick size for clarity
+    "xtick.major.width": 3,            # Major tick width
+    "ytick.major.width": 3,            # Major tick width
+    "xtick.minor.size": 5,            # Minor tick size for precision
+    "ytick.minor.size": 5,            # Minor tick size for precision
+    "xtick.minor.width": 3,           # Minor tick width
+    "ytick.minor.width": 3,           # Minor tick width
+    "xtick.minor.visible": True,      # Show minor ticks
+    "ytick.minor.visible": True,      # Show minor ticks
+    "legend.fontsize": 12,             # Larger legend font size for better readability
+    "legend.frameon": True,           # Frame around the legend for clarity
+    "legend.loc": 'upper center',     # Optimal legend placement at the top center
+    "legend.markerscale": 1.5,        # Adjust marker size in the legend
+    "legend.borderpad": 1.0,          # Padding around the legend
+    "savefig.dpi": 500,               # High DPI for publication-quality images
+    "savefig.bbox": 'tight',          # Tight bounding box for saving
+})
