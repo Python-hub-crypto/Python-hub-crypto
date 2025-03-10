@@ -1,0 +1,81 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib
+
+plt.rcParams.update({
+    "font.family": "Times New Roman",  # Preferred serif font for publications
+    "font.size": 28,                   # General font size
+    "axes.labelsize": 35,              # Axis label size (increased)
+    "axes.titlesize": 20,              # Title size
+    "axes.labelweight": 'bold',        # Bold labels for emphasis
+    "axes.linewidth": 2.5,             # Thicker axis lines for clarity
+    "lines.linewidth": 3,              # Thicker lines for visibility
+    "xtick.labelsize": 30,             # X-axis tick label size
+    "ytick.labelsize": 30,             # Y-axis tick label size
+    "xtick.direction": 'in',           # Tick marks directed inward for clean layout
+    "ytick.direction": 'in',           # Tick marks directed inward for clean layout
+    "xtick.top": False,                 # Display ticks on top
+    "ytick.right": True,               # Display ticks on the right
+    "xtick.major.size": 10,            # Major tick size for clarity
+    "ytick.major.size": 10,            # Major tick size for clarity
+    "xtick.major.width": 3,            # Major tick width
+    "ytick.major.width": 3,            # Major tick width
+    "xtick.minor.size": 5,            # Minor tick size for precision
+    "ytick.minor.size": 5,            # Minor tick size for precision
+    "xtick.minor.width": 3,           # Minor tick width
+    "ytick.minor.width": 3,           # Minor tick width
+    "xtick.minor.visible": True,      # Show minor ticks
+    "ytick.minor.visible": True,      # Show minor ticks
+    "legend.fontsize": 15,             # Larger legend font size for better readability
+    "legend.frameon": True,           # Frame around the legend for clarity
+    "legend.loc": 'upper center',     # Optimal legend placement at the top center
+    "legend.markerscale": 1.5,        # Adjust marker size in the legend
+    "legend.borderpad": 1.0,          # Padding around the legend
+    "savefig.dpi": 500,               # High DPI for publication-quality images
+    "savefig.bbox": 'tight',          # Tight bounding box for saving
+})
+
+# Data
+categories = ['Parallel', 'Herringbone', 'Perpendicular']
+systems = ['S0', 'S1 (1TA)', 'S2 (1SBT)', 'S3 (1MNT)', 'S4 (2SBT)', 'S5 (2MNT)', 'S6 (4SBT)', 'S7 (4MNT)']
+
+data = np.array([
+    [22, 21, 22, 21, 22, 22, 22, 21],  # Parallel
+    [47, 48, 46, 47, 46, 45, 45, 46],  # Herringbone
+    [31, 31, 32, 32, 32, 32, 33, 33]   # Perpendicular
+])
+
+# Plot setup
+x = np.arange(len(categories))  
+width = 0.11 
+colors = ['#102F6B', '#1D4F91', '#56A0D3', '#B1D1A7', '#F4E79E', '#E69F00', '#009E73', '#CC79A7']
+fig, ax = plt.subplots(figsize=(10, 6), dpi=1000)
+
+# Plotting the bars
+for i, (label, color) in enumerate(zip(systems, colors)):
+    ax.bar(x + i * width, data[:, i], width=width, label=label, color=color, capsize=3, alpha=0.9)
+
+# Axis labels and title
+ax.set_xlabel('π-π stacking orientation', fontsize=28, fontweight='bold', labelpad=10)
+ax.set_ylabel('Percentage (%)', fontsize=28, fontweight='bold', labelpad=10)
+
+# Customizing ticks and labels
+ax.set_xticks(x + (len(systems) / 2 - 0.5) * width)  
+ax.set_xticklabels(categories, fontsize=18, fontweight='bold')
+ax.set_yticks(np.arange(0, 110, 20))
+ax.set_yticklabels([str(i) for i in range(0, 110, 20)], fontsize=18,  fontweight='bold')
+ax.yaxis.set_minor_locator(matplotlib.ticker.AutoMinorLocator(2))
+
+# Adding grid
+ax.grid(axis='y', linestyle='--', linewidth=0.7, alpha=0.7)
+ax.grid(axis='x', linestyle='--', linewidth=0.7, alpha=0.7)
+
+# Legend setup
+ax.legend(ncol=4, fontsize=18, frameon=True, fancybox=False, shadow=True, loc='upper center', prop={'weight': 'normal'})
+
+# Adjust layout and save
+plt.tight_layout()
+plt.savefig('pi_stacking_pattern.png', dpi=500, bbox_inches="tight")
+
+# Show plot
+plt.show()
