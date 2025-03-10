@@ -15,7 +15,6 @@ I am expanding my expertise in **MD simulations**, **enhanced sampling technique
 ## 🔗 Let's Collaborate!  
 I am open to collaboration on **MD simulations, AI-driven trajectory analysis, and quantum computing applications in biomolecular research.** If you're working on innovative techniques for molecular modeling, let's connect!  
 
-📧 **Contact me at:** [abdulazizcaluniv@gmail.com](mailto:abdulazizcaluniv@gmail.com)  
 
 ## 🛠️ Tools & Technologies  
 - **Molecular Dynamics Simulations:** GROMACS, AMBER  
